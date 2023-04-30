@@ -1,0 +1,16 @@
+[tool.pdm]
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Shotaro Kohama", email = "khmshtr28@gmail.com"},
+]
+dependencies = [
+    "fire>=0.5.0",
+    "requests>=2.29.0",
+    "pillow>=9.5.0",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
