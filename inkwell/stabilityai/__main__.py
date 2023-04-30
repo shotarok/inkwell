@@ -14,7 +14,7 @@ from inkwell.constants import (
 )
 
 
-STYLE_PRESETS = ["photographic", "cinematic", "digital-art", "neon-punk"]
+STYLE_PRESETS = ["digital-art", "neon-punk"]
 ENGINE_ID = os.getenv("ENGINE_ID", "stable-diffusion-v1-5")
 API_KEY = os.getenv("STABILITY_API_KEY")
 
