@@ -26,6 +26,12 @@ jobs:
       - name: Install dependencies
         run: pdm install
 
+      - id: prompt
+        name: Get a random prompt from HuggingFace Hub
+        run: |
+            eval $(pdm venv activate)
+            echo "prompt='$(python -m inkwell.prompt)'" >> ${GITHUB_OUTPUT}
+
       - name: Build Resources
         shell: bash
         run: |
@@ -33,14 +39,12 @@ jobs:
             STABILITY_API_KEY="${{ secrets.STABILITY_API_KEY }}" \
             PYTHONPATH=$(pwd) \
                 python -m inkwell.stabilityai \
-                    "${PROMPT}" ./build
-        env:
-            PROMPT: Mystical underwater world with vibrant coral and exotic sea creatures, sun beams shining through the water, mysterious, magical, otherworldly
+                    "${{ steps.prompt.outputs.prompt }}" ./build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./build
-            keep_files: true  # Some plugins do not always rebuild!!
+            keep_files: true
             allow_empty_commit: true  # Add a commit anyway to show we tried
