@@ -31,7 +31,7 @@ jobs:
             STABILITY_API_KEY="${{ secrets.STABILITY_API_KEY }}" \
             PYTHONPATH=$(pwd) \
                 python -m inkwell.stabilityai \
-                    "${PROMPT}"" ./build
+                    "${PROMPT}" ./build
         env:
             PROMPT: Mystical underwater world with vibrant coral and exotic sea creatures, sun beams shining through the water, mysterious, magical, otherworldly
 
