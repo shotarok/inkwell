@@ -27,7 +27,7 @@ jobs:
       - name: Build Resources
         shell: bash
         run: |
-            eval $(pdm venv activate for-test)
+            eval $(pdm venv activate)
             STABILITY_API_KEY="${{ secrets.STABILITY_API_KEY }}" \
             PYTHONPATH=$(pwd) \
                 python -m inkwell.stabilityai \
