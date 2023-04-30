@@ -1,0 +1,42 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron:  '0 7 * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Source
+        uses: actions/checkout@v3
+
+      - name: Make Directories
+        run: mkdir -p build
+
+      - uses: pdm-project/setup-pdm@v3
+        with:
+          python-version: 3.11
+          cache: true
+
+      - name: Install dependencies
+        run: pdm install
+
+      - name: Build Resources
+        shell: bash
+        run: |
+            eval $(pdm venv activate for-test)
+            STABILITY_API_KEY="${{ secrets.STABILITY_API_KEY }}" \
+            PYTHONPATH=$(pwd) \
+                python -m inkwell.stabilityai \
+                    ${PROMPT} ./build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./build
+            keep_files: true  # Some plugins do not always rebuild!!
+            allow_empty_commit: true  # Add a commit anyway to show we tried
