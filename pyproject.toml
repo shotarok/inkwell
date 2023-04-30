@@ -1,9 +1,9 @@
 [tool.pdm]
 
 [project]
-name = ""
-version = ""
-description = ""
+name = "inkwell"
+version = "0.1.0"
+description = "tools generating digital arts for display on Inky Frame 7.3"
 authors = [
     {name = "Shotaro Kohama", email = "khmshtr28@gmail.com"},
 ]
