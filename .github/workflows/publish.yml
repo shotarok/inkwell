@@ -30,7 +30,9 @@ jobs:
         name: Get a random prompt from HuggingFace Hub
         run: |
             eval $(pdm venv activate)
-            echo "prompt='$(python -m inkwell.prompt)'" >> ${GITHUB_OUTPUT}
+            RANDOM_PROMPT=$(python -m inkwell.prompt)
+            echo "prompt='${RANDOM_PROMPT}'" >> ${GITHUB_OUTPUT}
+            echo ${RANDOM_PROMPT} | tee ./build/prompt.txt
 
       - name: Build Resources
         shell: bash
