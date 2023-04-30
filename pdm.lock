@@ -35,6 +35,12 @@ requires_python = ">=3.7"
 summary = "Python Imaging Library (Fork)"
 
 [[package]]
+name = "polars"
+version = "0.17.10"
+requires_python = ">=3.7"
+summary = "Blazingly fast DataFrame library"
+
+[[package]]
 name = "requests"
 version = "2.29.0"
 requires_python = ">=3.7"
@@ -67,7 +73,7 @@ summary = "HTTP library with thread-safe connection pooling, file post, and more
 [metadata]
 lock_version = "4.2"
 groups = ["default"]
-content_hash = "sha256:7801459a8dd066422140205d82ba550508d659302c7bd84684857f5398283614"
+content_hash = "sha256:999b7c4d1c5751059531a1ad3ba3882525879c94df8fe5df72ef510704b71ed9"
 
 [metadata.files]
 "certifi 2022.12.7" = [
@@ -225,6 +231,14 @@ content_hash = "sha256:7801459a8dd066422140205d82ba550508d659302c7bd84684857f539
     {url = "https://files.pythonhosted.org/packages/ec/7d/01404982db598f271ac7c0d0207860f60ab9288cfacce9872eb567cfbfe3/Pillow-9.5.0-cp37-cp37m-macosx_10_10_x86_64.whl", hash = "sha256:5d4ebf8e1db4441a55c509c4baa7a0587a0210f7cd25fcfe74dbbce7a4bd1906"},
     {url = "https://files.pythonhosted.org/packages/f2/43/0892913d499c8df2c88dee69d59e77de19e0c51754a9be82023880641c09/Pillow-9.5.0-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:8aca1152d93dcc27dc55395604dcfc55bed5f25ef4c98716a928bacba90d33a3"},
     {url = "https://files.pythonhosted.org/packages/ff/fc/48a51c0fe2a00d5def57b9981a1e0f8339b516351da7a51500383d833bc8/Pillow-9.5.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:608488bdcbdb4ba7837461442b90ea6f3079397ddc968c31265c1e056964f1ef"},
+]
+"polars 0.17.10" = [
+    {url = "https://files.pythonhosted.org/packages/0e/d6/b9da06c29dbfc0385d8e0bd02d54cb6d0b97a8ef75fcc00c1add8e72d956/polars-0.17.10-cp37-abi3-win_amd64.whl", hash = "sha256:45db5fc9d99a7b415b6022caf0218a8565586fb33896b8a3b1c5e1df276e209c"},
+    {url = "https://files.pythonhosted.org/packages/a2/67/8cf7e37de426b6df5b6ac4d21402b64fc4fa9148da29fac268ee1a7d58f8/polars-0.17.10-cp37-abi3-macosx_10_7_x86_64.whl", hash = "sha256:d6e4407dbe6282a79cf2271fed5b8318dfd991fc28dd487d24dab560fb4a0932"},
+    {url = "https://files.pythonhosted.org/packages/c1/aa/0ae28b1044ddefce13d007b5fda13ac4380af0a6ab9c2310b7efa9d2e1fe/polars-0.17.10.tar.gz", hash = "sha256:00a85ac9bdb4aa1dde9e7d31845a16aad2ef939ad411086cfa213ed65a41cbe2"},
+    {url = "https://files.pythonhosted.org/packages/d6/68/82627fcb8b497491bb187906d5381a4369e9c10ea3a2fe010823240c510d/polars-0.17.10-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3a2118798719b8302bff68a0595d97e3b502faa120da79704722d2e8496f3dc5"},
+    {url = "https://files.pythonhosted.org/packages/d9/30/cf8e8924d306a53f79fec4342cfe2856fdba5ebaeaf3362dbd096dbe8a5a/polars-0.17.10-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:bba2402492403ec556c1138623560dc0352ed22e5393617d0cc5f3c51363fc03"},
+    {url = "https://files.pythonhosted.org/packages/e7/0b/ccd7f543851b149769af3a7b39b12ad674ec98579457045c85bbae38ba5d/polars-0.17.10-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:513e60c0d8c91004f6b325c9d40a96eefefc35fcc45126fa625345b04c1c3731"},
 ]
 "requests 2.29.0" = [
     {url = "https://files.pythonhosted.org/packages/4c/d2/70fc708727b62d55bc24e43cc85f073039023212d482553d853c44e57bdb/requests-2.29.0.tar.gz", hash = "sha256:f2e34a75f4749019bb0e3effb66683630e4ffeaf75819fb51bebef1bf5aef059"},
