@@ -14,7 +14,7 @@ from inkwell.constants import (
 )
 
 
-STYLE_PRESETS = ["digital-art", "neon-punk"]
+STYLE_PRESETS = ["digital-art", "neon-punk", "photographic", "isometric", "low-poly"]
 ENGINE_ID = os.getenv("ENGINE_ID", "stable-diffusion-512-v2-1")
 API_KEY = os.getenv("STABILITY_API_KEY")
 
@@ -46,7 +46,7 @@ def main(prompt, dest):
                 "height": 576,
                 "width": 960,
                 "samples": 1,
-                "steps": 25,
+                "steps": 20,
                 "style_preset": style,
             },
         )
