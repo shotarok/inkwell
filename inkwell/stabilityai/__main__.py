@@ -34,7 +34,7 @@ def main(prompt, dest):
             },
             # MEMO(shotarok) (576, 960) is the minimum size of (width, height) satisfied with
             # * InkyFrame 7.3"'s aspect ratio: 3 x 5
-            # * Stability AI API's minimum area size
+            # * Stability AI API's minimum area size: 262,144 ≤ height * width
             json={
                 "text_prompts": [
                     {
@@ -46,7 +46,7 @@ def main(prompt, dest):
                 "height": 576,
                 "width": 960,
                 "samples": 1,
-                "steps": 20,
+                "steps": 25,
                 "style_preset": style,
             },
         )
