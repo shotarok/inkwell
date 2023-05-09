@@ -46,7 +46,7 @@ def main(prompt, dest):
                 "height": 576,
                 "width": 960,
                 "samples": 1,
-                "steps": 25,
+                "steps": 50,
                 "style_preset": style,
             },
         )
