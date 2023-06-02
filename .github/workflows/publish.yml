@@ -50,3 +50,5 @@ jobs:
             publish_dir: ./build
             keep_files: true
             allow_empty_commit: true  # Add a commit anyway to show we tried
+            user_name: 'github-actions[bot]'
+            user_email: 'github-actions[bot]@users.noreply.github.com'
