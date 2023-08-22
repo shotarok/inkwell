@@ -16,7 +16,7 @@ FAVORITE_ARTISTS = [
 
 def main():
     artist = random.choice(FAVORITE_ARTISTS)
-    prefix = f", created by {artist}."
+    suffix = f", created by {artist}."
 
     df = pl.read_parquet(PARQUET_FILE_URL)
     print(df.sample(1)[0, "Prompt"], suffix)
