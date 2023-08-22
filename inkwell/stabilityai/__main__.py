@@ -41,7 +41,7 @@ def main(prompt, dest):
                         "text": prompt
                     }
                 ],
-                "cfg_scale": 7,
+                "cfg_scale": 30, # 0 <= cfg_scale <= 35. How strictly the diffusion process adheres to the prompt text (higher values keep your image closer to your prompt).
                 "clip_guidance_preset": "FAST_BLUE",
                 "height": 576,
                 "width": 960,
