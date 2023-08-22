@@ -2,7 +2,9 @@ name: Publish to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - add-artists-names-to-prompt
   schedule:
     - cron:  '0 7 * * *'
 
