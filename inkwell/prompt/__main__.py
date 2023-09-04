@@ -2,7 +2,7 @@ import polars as pl
 
 
 # See https://huggingface.co/datasets/poloclub/diffusiondb
-PARQUET_FILE_URL = "https://huggingface.co/datasets/poloclub/diffusiondb/raw/main/metadata.parquet"
+PARQUET_FILE_URL = "https://huggingface.co/datasets/poloclub/diffusiondb/resolve/main/metadata.parquet"
 
 
 def main():
